@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jogador</title>
+</head>
+
+<body>
+    <div>
+        <h1>Cadastro de jogador</h1>
+    </div>
+
+    <div>
+        <form action="https://api-aula.up.railway.app/generica" method="post">
+            <!-- Texto -->
+            <label for="nick">Nick:</label>
+            <input type="text" id="nick" name="nick" placeholder="Digite seu nick">
+            <br><br>
+
+            <!-- E-mail -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+            <br><br>
+
+            <!-- Senha -->
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+            <br><br>
+
+            <!-- Número -->
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="0" max="120">
+            <br><br>
+
+            <!-- Data -->
+            <label for="data">Data de Nascimento:</label>
+            <input type="date" id="data" name="data">
+            <br><br>
+
+            <!-- Radio -->
+            <p>Classe:</p>
+            <input type="radio" id="knight" name="classe" value="knight" checked>
+            <label for="knight">Knight</label>
+            <br>
+            <input type="radio" id="mage" name="classe" value="mage">
+            <label for="mage">Mage</label>
+            <br>
+            <input type="radio" id="archer" name="classe" value="archer">
+            <label for="archer">Archer</label>
+            <br><br>
+
+            <!-- Checkbox -->
+            <p>Pacotes:</p>
+            <input type="checkbox" id="vip" name="vip" value="vip">
+            <label for="vip">Vip</label>
+            <br>
+            <input type="checkbox" id="premium" name="premium" value="premium">
+            <label for="premium">Premium</label>
+            <br><br>
+
+            <!-- Select + options (Dropdown) -->
+            <label for="servidor">Servidor:</label>
+            <select id="servidor" name="servidor" required>
+                <option value="">Selecione...</option>
+                <option value="br">Brasil</option>
+                <option value="eua">Estados Unidos</option>
+                <option value="jp">Japão</option>
+            </select>
+            <br><br>
+
+            <!-- Select + multi options (Dropdown) -->
+            <label for="pais">Jogos favoritos:</label>
+            <select id="jogos_favoritos" name="jogos_favoritos[]" multiple size="5" required>
+                <option value="cod">Call of Duty</option>
+                <option value="fifa">Fifa</option>
+                <option value="lol">League of Legends</option>
+                <option value="tibia">Tibia</option>
+                <option value="witcher">The Witcher</option>
+                <option value="gta">GTA</option>
+            </select>
+            <br><br>
+
+            <!-- Textarea -->
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50"
+                placeholder="Escreva sua mensagem aqui..."></textarea>
+            <br><br>
+
+            <!-- File Upload -->
+            <label for="arquivo">Anexar Arquivo:</label>
+            <!-- imagem -->
+            <input type="file" id="arquivo" name="arquivo" accept="image/*">
+            <br><br>
+
+            <!-- Hidden (campo oculto) -->
+            <input type="hidden" name="token" value="12345">
+
+            <!-- Botão de envio -->
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+</body>
+
+</html>
